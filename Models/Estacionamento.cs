@@ -32,7 +32,7 @@ namespace teste_projeto.Models
             string placa = "";
 
             //IDENTIFICA SE O ESTACIONAMENTO ESTÁ EM HORÁRIO DE FUNCIONAMENTO
-            if (VerificarEstacionamentoAberto(horaEntrada))
+            if (!VerificarEstacionamentoAberto(horaEntrada))
             {
                 Console.WriteLine("O Estacionamento está fora do horário de funcionamento.");
                 return;
@@ -58,7 +58,7 @@ namespace teste_projeto.Models
                 placa = Console.ReadLine();
                 
                 // Validar placa
-                if (!Veiculo.ValidarPlaca(placa)){
+                if (!ValidarPlaca(placa)){
                     Console.WriteLine("Esta placa não é válida!");
                     return;
                 }
@@ -76,7 +76,7 @@ namespace teste_projeto.Models
                 placa = Console.ReadLine();
 
                  // Validar placa
-                if (!Veiculo.ValidarPlaca(placa)){
+                if (!ValidarPlaca(placa)){
                     Console.WriteLine("Esta placa não é válida!");
                     return;
                 }
@@ -103,7 +103,7 @@ namespace teste_projeto.Models
 
 
             // VALIDAÇÃO PLACA
-           if (!Veiculo.ValidarPlaca(placa)){
+           if (!ValidarPlaca(placa)){
                     Console.WriteLine("Esta placa não é válida!");
                     return;
                 }
@@ -185,32 +185,26 @@ namespace teste_projeto.Models
             return false;
         }
 
-        // MÉTODO PARA IDENTIFICAR O TIPO DE VEICULO
         
+        // MÉTODO PARA VALIDAR PLACA
+        public static bool ValidarPlaca(string placa)
+        {
+            try
+            {
+                return ValidacaoPlaca.ValidarPlaca(placa);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                return false;
+            }
 
-        // validar placa dá p ser um teste unitario 
-        // string placa = "xxx";
-        // bool placaValida = ....ValidarPlaca(placa);
-        // Assert.False(placaValida, "placa deve dar inválida")
-
-        // teste unitario tipo de veiculo
-        // string tipoVeiculo = "yyy";
-        // bool veiculoValido = ....IdentificarTipoVeiculo(tipoVeiculo);
-        // Assert.False(veiculoValido, "veículo deve dar inválido")
-
-        // teste unitário verificar estacionamento aberto
-        // int hora1 = 0;
-        // bool resultado = ....VerificarEstacionamentoAberto(DateTime.TryParse(hora1))
-        // Assert.False(resultato, "o estacionamento deve estar fechado")
+        }
 
     }
 }
 
 
-// verificar pra nao passar valores vazios ou nulos    OK
-// estabelecer o padrao para "moto" e "carro"          OK
-// validação da placa                                  OK
-// Testes unitarios
+
 // passar p projeto original
 // refazer o UML
 // refazer o read me do projeto

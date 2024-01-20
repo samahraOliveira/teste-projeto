@@ -23,18 +23,5 @@ namespace teste2_projeto.Models
                 return TipoVeiculo.invalido;
         }
 
-        // MÉTODO PARA VALIDAR PLACA
-        public static bool ValidarPlaca(string placa)
-        {
-            try
-            {
-                return ValidacaoPlaca.ValidarPlaca(placa);
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                return false;
-            }
-
-        }
     }
 }

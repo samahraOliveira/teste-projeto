@@ -6,6 +6,12 @@
     <RootNamespace>teste2_projeto</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <AttributeUsage>AllowMultiple=true</AttributeUsage>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.6.6" />
+  </ItemGroup>
+
 
 </Project>

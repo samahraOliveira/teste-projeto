@@ -12,3 +12,10 @@ C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projet
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.pdb
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.genruntimeconfig.cache
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\ref\teste2-projeto.dll
+C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.sourcelink.json
+C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\bin\Debug\net8.0\xunit.abstractions.dll
+C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\bin\Debug\net8.0\xunit.assert.dll
+C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\bin\Debug\net8.0\xunit.core.dll
+C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\bin\Debug\net8.0\xunit.execution.dotnet.dll
+C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.csproj.AssemblyReference.cache
+C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.csproj.CopyComplete
