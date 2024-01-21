@@ -4,8 +4,6 @@ C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projet
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\bin\Debug\net8.0\teste2-projeto.dll
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\bin\Debug\net8.0\teste2-projeto.pdb
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.AssemblyInfoInputs.cache
-C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.AssemblyInfo.cs
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.csproj.CoreCompileInputs.cache
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\teste2-projeto.dll
 C:\Users\samah\OneDrive\Área de Trabalho\Faculdade\ADS\DecolaTech\teste2-projeto\obj\Debug\net8.0\refint\teste2-projeto.dll

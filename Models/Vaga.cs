@@ -7,8 +7,13 @@ namespace teste_projeto.Models
 {
     public abstract class Vaga
     {
-        public Vaga() { }
+        public virtual bool VagasDisponiveis(List<string>veiculos){
+            if (veiculos.Count >= 10){
+                return false;
+            } else {
+                return true;
+            }
 
-        public abstract bool VagasDisponiveis(List<string> veiculos);
+        }
     }
 }

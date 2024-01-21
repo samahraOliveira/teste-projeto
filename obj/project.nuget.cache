@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2YJWYSNTJ1kmzbRs7ZUfg2/wlgtMd6ECmKQF5VeitKgfMRmry7y2MRAtSyFp9U91PUKaxlJcjYu4aHc4hIB9Hw==",
+  "dgSpecHash": "HbU8ht3UGIScyGvMSCeFDn+a90H4ZpjJxQ5n9uQfIjgz8Ka+oRx+EQmvnlwxN0gWnzV1nLwNpksb2uymzuq67g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj",
+  "projectFilePath": "c:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samah\\.nuget\\packages\\xunit\\2.6.6\\xunit.2.6.6.nupkg.sha512",
     "C:\\Users\\samah\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",

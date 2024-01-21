@@ -6,7 +6,7 @@
     <RootNamespace>teste2_projeto</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <AttributeUsage>AllowMultiple=true</AttributeUsage>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>

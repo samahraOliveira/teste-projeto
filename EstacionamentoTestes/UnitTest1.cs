@@ -4,12 +4,11 @@ namespace EstacionamentoTestes;
 
 public class EstacionamentoTeste
 {
-    private Estacionamento _testes = new Estacionamento();
 
+    Estacionamento estacionamento = new Estacionamento();
     [Fact]
     public void VerificarEstacionamentoAbertoHoraDentroDoHorarioRetornarTrue()
     {
-        Estacionamento estacionamento = new Estacionamento();
         DateTime horaDentroDoHorario = new DateTime(2024, 1, 1, 10, 0, 0);
 
         bool resultado = estacionamento.VerificarEstacionamentoAberto(horaDentroDoHorario);

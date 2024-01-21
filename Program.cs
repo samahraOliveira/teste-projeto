@@ -7,6 +7,7 @@ Console.WriteLine("Seja bem vindo ao sistema de estacionamento!");
 // Instancia a classe Estacionamento, já com os valores obtidos anteriormente
 Estacionamento es = new Estacionamento();
 
+
 string opcao = string.Empty;
 bool exibirMenu = true;
 

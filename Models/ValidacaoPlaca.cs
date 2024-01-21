@@ -6,13 +6,17 @@ using System.Text.RegularExpressions;
 
 namespace teste_projeto.Models
 {
-    public class ValidacaoPlaca
+    public static class ValidacaoPlaca
     {
         public static bool ValidarPlaca(string placa)
         {
-            if (string.IsNullOrWhiteSpace(placa)) { return false; }
+            if (string.IsNullOrWhiteSpace(placa)) { 
+                return false; 
+            }
 
-            if (placa.Length > 8) { return false; }
+            if (placa.Length > 8) {
+                 return false; 
+            }
 
             placa = placa.Replace("-", "").Trim();
 

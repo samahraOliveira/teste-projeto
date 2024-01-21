@@ -7,11 +7,14 @@ namespace teste_projeto.Models
 {
     public class VagaMoto : Vaga
     {
-        private List<string> motos = new List<string>();
+        
         public override bool VagasDisponiveis(List<string> veiculosMoto)
         {
-            if (veiculosMoto.Count >= 4) return false;
-            return true;
+            if (veiculosMoto.Count >= 4) {
+                return false;
+            } else {
+                return true;
+            }
         }
     }
 }

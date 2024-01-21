@@ -11,20 +11,14 @@ namespace teste_projeto.Models
 {
     public class Estacionamento
     {
-        public decimal PrecoInicial = 10;
-        public decimal PrecoPorHora = 5;
-        public TimeSpan TempoTotal { get; set; }
+        private decimal PrecoInicial { get; set; }
+        private decimal PrecoPorHora { get; set; }
+
         private List<string> veiculosCarro = new List<string>();
         private List<string> veiculosMoto = new List<string>();
 
         public Estacionamento() { }
-        public Estacionamento(decimal precoInicial, decimal precoPorHora, TimeSpan tempoTotal)
-        {
-            PrecoInicial = precoInicial;
-            PrecoPorHora = precoPorHora;
-            TempoTotal = tempoTotal;
-        }
-
+        
         // MÉTODO PARA CADASTRAR VEÍCULO
         public void CadastrarVeiculo()
         {
@@ -39,7 +33,7 @@ namespace teste_projeto.Models
             }
 
             // IDENTIFICAÇÃO DO VEÍCULO (CARRO OU MOTO) E SE AINDA HÁ VAGAS
-            TipoVeiculo tipoVeiculo = Veiculo.IdentificarTipoVeiculo();
+            TipoVeiculo tipoVeiculo = IdentificarTipoVeiculo();
             if (tipoVeiculo == TipoVeiculo.invalido)
             {
                 Console.WriteLine("Digite uma opção válida");
@@ -54,73 +48,63 @@ namespace teste_projeto.Models
                     Console.WriteLine("O estacionamento atingiu a sua capacidade máxima de carros!");
                     return;
                 }
-                Console.WriteLine("Digite a placa do veículo para estacionar: ");
-                placa = Console.ReadLine();
-                
-                // Validar placa
-                if (!ValidarPlaca(placa)){
-                    Console.WriteLine("Esta placa não é válida!");
-                    return;
-                }
             }
-
-            if (tipoVeiculo == TipoVeiculo.moto)
-            {
-                VagaMoto vagaMoto = new VagaMoto();
-                if (!vagaMoto.VagasDisponiveis(veiculosMoto))
+                else if (tipoVeiculo == TipoVeiculo.moto)
                 {
-                    Console.WriteLine("O estacionamento atingiu a sua capacidade máxima de motos!");
-                    return;
+                    VagaMoto vagaMoto = new VagaMoto();
+                    if (!vagaMoto.VagasDisponiveis(veiculosMoto))
+                    {
+                        Console.WriteLine("O estacionamento atingiu a sua capacidade máxima de motos!"); 
+                        return;  
+                    }
                 }
-                Console.WriteLine("Digite a placa do veículo para estacionar: ");
-                placa = Console.ReadLine();
 
-                 // Validar placa
-                if (!ValidarPlaca(placa)){
-                    Console.WriteLine("Esta placa não é válida!");
-                    return;
-                }
+            // LEITURA E VALIDAÇÃO DA PLACA
+            Console.WriteLine("Digite a placa do veículo para estacionar: ");
+            placa = Console.ReadLine();
+            if (!ValidarPlaca(placa))
+            {
+                Console.WriteLine("Esta placa não é válida!");
+                return;
             }
 
-        // ADICIONAR O VEÍCULO NA LIST
-             if (tipoVeiculo == TipoVeiculo.carro)
-                 veiculosCarro.Add(placa);
-             else
-                 veiculosMoto.Add(placa);
+            // ADICIONAR O VEÍCULO NA LIST
+            if (tipoVeiculo == TipoVeiculo.carro)
+                veiculosCarro.Add(placa);
+            else
+                veiculosMoto.Add(placa);
 
-             Console.WriteLine("Veículo inserido no estacionamento!");
-         }
+            Console.WriteLine("Veículo inserido no estacionamento!");
+        }
 
 
         // MÉTODO PARA REMOVER VEÍCULO
         public void RemoverVeiculo()
         {
+            PrecoInicial = 10;
+            PrecoPorHora = 5;
+
             Console.WriteLine("Digite a placa do veículo para remover:");
+            string placa = Console.ReadLine();
 
-            // Pedir para o usuário digitar a placa e armazenar na variável placa
-            string placa = "";
-            placa = Console.ReadLine();
-
-
-            // VALIDAÇÃO PLACA
-           if (!ValidarPlaca(placa)){
-                    Console.WriteLine("Esta placa não é válida!");
-                    return;
-                }
+            if (!ValidarPlaca(placa))
+            {
+                Console.WriteLine("Esta placa não é válida!");
+                return;
+            }
 
             Console.Clear();
 
             // Verifica se o veículo existe em alguma das listas
-            if (veiculosCarro.Any(x => x.ToUpper() == placa.ToUpper()) || veiculosMoto.Any(x => x.ToUpper() == placa.ToUpper()))
+            if (veiculosCarro.Any() || veiculosMoto.Any())
             {
                 // Faz o cálculo do tempo em que o veículo ficou estacionado
                 Console.WriteLine("Em que horário o veículo foi estacionado?(HH:mm)");
-                string horaEntradaString = "HH:mm";
-                horaEntradaString = Console.ReadLine();
+                string horaEntradaString = Console.ReadLine();
                 Console.Clear();
                 DateTime horaEntrada = DateTime.Parse(horaEntradaString);
 
-                TempoTotal = DateTime.Now.Subtract(horaEntrada);
+                TimeSpan TempoTotal = DateTime.Now.Subtract(horaEntrada);
                 int horasTotais = TempoTotal.Hours;
                 int minutosTotais = TempoTotal.Minutes;
 
@@ -151,12 +135,11 @@ namespace teste_projeto.Models
         // MÉTODO PARA LISTAR OS VEÍCULOS
         public void ListarVeiculos()
         {
-            // Verifica se há veículos no estacionamento
             if (veiculosCarro.Any() || veiculosMoto.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                // Laço de repetição, exibindo os veículos estacionados
 
+                // Laço de repetição, exibindo os veículos estacionados
                 Console.WriteLine("Carros: ");
 
                 foreach (string carros in veiculosCarro)
@@ -180,14 +163,16 @@ namespace teste_projeto.Models
         // MÉTODO PARA VERIFICAR SE O ESTACIONAMENTO ESTÁ ABERTO
         public bool VerificarEstacionamentoAberto(DateTime hora)
         {
-            if (hora.Hour > 7 && hora.Hour < 20)
+            if (hora.Hour < 7 && hora.Hour > 20){ 
+                return false;
+            } else {
                 return true;
-            return false;
+            }
         }
 
-        
+
         // MÉTODO PARA VALIDAR PLACA
-        public static bool ValidarPlaca(string placa)
+        private bool ValidarPlaca(string placa)
         {
             try
             {
@@ -198,6 +183,21 @@ namespace teste_projeto.Models
                 return false;
             }
 
+        }
+
+        // MÉTODO PARA IDENTIFICAR O TIPO DE VEICULO
+        private TipoVeiculo IdentificarTipoVeiculo()
+        {
+            Console.WriteLine("Qual tipo de veículo será estacionado (carro/moto)?");
+            string identificaVeiculo = Console.ReadLine();
+
+            if (identificaVeiculo == "carro") {
+                return TipoVeiculo.carro;
+            } else if (identificaVeiculo == "moto") {
+                return TipoVeiculo.moto;
+            } else {
+                return TipoVeiculo.invalido;
+            }
         }
 
     }

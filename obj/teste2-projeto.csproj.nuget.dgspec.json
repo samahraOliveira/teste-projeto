@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj": {}
+    "c:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj": {
+    "c:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj",
+        "projectUniqueName": "c:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj",
         "projectName": "teste2-projeto",
-        "projectPath": "C:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj",
+        "projectPath": "c:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\teste2-projeto.csproj",
         "packagesPath": "C:\\Users\\samah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\obj\\",
+        "outputPath": "c:\\Users\\samah\\OneDrive\\Área de Trabalho\\Faculdade\\ADS\\DecolaTech\\teste2-projeto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samah\\AppData\\Roaming\\NuGet\\NuGet.Config",
